@@ -69,7 +69,7 @@ namespace WordofDayBOT
         public async Task postToSlack(WordOfDayObject wordofdayOb)
         {
             var data = new NameValueCollection();
-            data["token"] = "xoxb-1446060487383-2261014106708-9xiOPGIejUYEPqLDZ4fZarr3";
+            data["token"] = "";
             data["channel"] = "insights-bot";
             data["as_user"] = "true";           // to send this message as the user who owns the token, false by default
             data["text"] = $"Todays date: {wordofdayOb.insertdate} :aliensmall:\n\nWord of the day is: *{wordofdayOb.wordofday}*\nDefinition: {wordofdayOb.definition}\nUsed in sentence: {wordofdayOb.example}\n\nExamples: {wordofdayOb.longexample}\n\nFun fact: {wordofdayOb.funfact}";
